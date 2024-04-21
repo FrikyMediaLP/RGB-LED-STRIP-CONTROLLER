@@ -1,0 +1,26 @@
+.LOADING_RING {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  border-radius: 10%;
+
+  .LOADING_RING_SPINNER {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: LOADING_RING_SPIN 1s infinite;
+  }
+
+  @keyframes LOADING_RING_SPIN {
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+}

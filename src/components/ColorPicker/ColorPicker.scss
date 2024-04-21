@@ -1,0 +1,17 @@
+.color-picker{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  input {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: white;
+    text-align: center;
+    outline: none;
+  }
+}

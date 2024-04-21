@@ -1,0 +1,168 @@
+$color-accent: #fa3737;
+$color-accent-numbers: 250, 55, 55;
+$color-accent-hsl: 0deg 78% 53%;
+$color-bright: dimgray;
+$color-light: #232323;
+$color-dark: #1D1D1D;
+$color-link: #0fffd3;
+$color-link-dark: #14deb9;
+
+$color-frikybot-light: #19a3ff;
+$color-frikybot-dark: #028deb;
+$color-frikybot-darker: #00497a;
+
+$color-err: #fa3737;
+$color-warn: #FFAE00;
+$color-info: #08A700;
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: $color-light;
+    color: white;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-bright;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $color-dark;
+}
+
+#app {
+  position: relative;
+  padding: 1rem;
+  height: calc(100svh - 5rem);
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &.blur {
+    overflow-y: hidden;
+    
+    > div {
+      filter: blur(5px);
+      pointer-events: none;
+    }
+  }
+
+  > .mode {
+    position: relative;
+    min-height: calc(100% - 1rem);
+    width: 60svw;
+    min-width: 200px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3 {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.75rem 0.8rem;
+  font-size: 2rem;
+  line-height: 1;
+  z-index: 3;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background: $color-dark;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 50svw;
+  width: 20rem;
+  height: calc(100% - 2rem);
+  padding: 1rem;
+  background-color: rgba($color-dark, 0.9);
+  z-index: 4;
+  translate: 100% 0;
+  transition: translate .3s ease;
+
+  &.show {
+    translate: 0 0;
+  }
+
+  h2 {
+    margin-top: 5rem;
+    border-bottom: 1px solid $color-bright;
+  }
+
+  button {
+    position: absolute;
+    right: 1rem;
+    padding: 0.75rem 0.8rem;
+    font-size: 2rem;
+    line-height: 1;
+
+    &:hover {
+      background: $color-light;
+    }
+
+    svg {
+      aspect-ratio: 1;
+    }
+  }
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  a {
+    text-align: center;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: $color-light;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+      color: $color-link;
+    }
+  }
+}

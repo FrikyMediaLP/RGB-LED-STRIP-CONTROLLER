@@ -1,0 +1,42 @@
+@import './../../main.scss';
+
+#app {
+  .fade-color-mode {
+
+    .steps > div:not(.step) {
+      padding-bottom: 10rem;
+    }
+
+    .step {
+      padding: 1rem 0;
+      margin: 0 2rem;
+      width: 100%;
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-bright;
+      }
+      
+      .remove-button {
+        margin-left: 1rem;
+        font-size: 1rem;
+        color: $color-accent;
+        padding: 0.5rem;
+        line-height: 1;
+        background-color: $color-dark;
+        border-radius: 0.25rem;
+  
+        svg {
+          aspect-ratio: 1;
+        }
+      }
+    }
+  
+    .add-button {
+      margin: 0 auto;
+      margin-top: 2rem;
+      display: block;
+      font-size: 3rem;
+    }
+  }
+}

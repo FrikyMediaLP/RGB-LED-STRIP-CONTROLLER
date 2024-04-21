@@ -1,0 +1,55 @@
+@import './../../main.scss';
+
+.status-message {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  width: 80svw;
+  min-width: 200px;
+  max-width: 800px;
+  translate: -50% 0;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgba($color-info, 0.9);
+  color: white;
+  z-index: 3;
+
+  &.info {
+    background-color: rgba($color-info, 0.9);
+  }
+
+  &.warning {
+    background-color: rgba($color-warn, 0.9);
+  }
+
+  &.error {
+    background-color: rgba($color-err, 0.9);
+  }
+
+  button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    line-height: 1;
+    padding: 0;
+
+    svg {
+      aspect-ratio: 1;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    text-transform: uppercase; 
+    
+    + span {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .description {
+    margin-top: 1rem;
+    display: block;
+    font-size: 0.75rem;
+  }
+}
