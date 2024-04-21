@@ -33,9 +33,19 @@ This project uses an Arduino Yùn microcontroller to controll an RGB LED Strip w
 
 The Arduino Yùn setup guide can be found here: [Getting Started with the Arduino Yún | Arduino Docs](https://docs.arduino.cc/retired/getting-started-guides/ArduinoYun/)
 
+This Arduino Sketch requires the following Packages:
+- Bridge
+- BridgeServer
+- BridgeClient
+
+Upload the [Arduino Sketch](RGB-LED-STRIP-CONTROLLER.ino) to your Arduino Yùn using the ARV ISP programmer and copy the `arduino` folder inside the `dist` folder onto your Yùn´s SD-Card.
+
+The Arduino Webserver is hosted at `http://[YOUR ARDUINO IP]/sd/`.
+
+## Modification
+
 This web interface is build with React & TypeScript and needs to be bundled using webpack.
 
-### Setup
 **Make sure you have Node.js and NPM installed.**
 
 Install Node.js Packages using npm.
